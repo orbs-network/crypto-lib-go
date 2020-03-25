@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  tests:
+    docker:
+      - image: circleci/golang:1.12.9
+    resource_class: large
+    steps:
+      - checkout
+      - run:
+          command: ./test.sh
+
+workflows:
+  version: 2
+  build:
+    jobs:
+    - tests
