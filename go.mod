@@ -3,7 +3,7 @@ module github.com/orbs-network/crypto-lib-go
 go 1.13
 
 require (
-	github.com/ethereum/go-ethereum v1.9.12
+	github.com/ethereum/go-ethereum v1.9.6
 	github.com/orbs-network/go-mock v0.0.0-20180813130752-890a1ee8d0a1
 	github.com/orbs-network/lean-helix-go v0.2.7
 	github.com/orbs-network/membuffers v0.4.0
