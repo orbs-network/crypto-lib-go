@@ -8,7 +8,7 @@ package digest
 
 import (
 	"github.com/orbs-network/crypto-lib-go/crypto/hash"
-	"github.com/orbs-network/crypto-lib-go/crypto/signature"
+	"github.com/orbs-network/crypto-lib-go/crypto/ethereum/signature"
 	"github.com/orbs-network/orbs-spec/types/go/primitives"
 	"github.com/pkg/errors"
 )

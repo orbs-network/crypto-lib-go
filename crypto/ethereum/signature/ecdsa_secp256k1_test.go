@@ -9,7 +9,7 @@ package signature
 import (
 	"encoding/hex"
 	"github.com/orbs-network/crypto-lib-go/crypto/hash"
-	"github.com/orbs-network/crypto-lib-go/test/crypto/keys"
+	"github.com/orbs-network/crypto-lib-go/test/crypto/ethereum/keys"
 	"github.com/stretchr/testify/require"
 	"testing"
 )

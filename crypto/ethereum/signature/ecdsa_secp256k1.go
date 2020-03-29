@@ -9,7 +9,7 @@ package signature
 import (
 	"fmt"
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
-	"github.com/orbs-network/crypto-lib-go/crypto/keys"
+	"github.com/orbs-network/crypto-lib-go/crypto/ethereum/keys"
 	"github.com/orbs-network/orbs-spec/types/go/primitives"
 	"github.com/pkg/errors"
 )

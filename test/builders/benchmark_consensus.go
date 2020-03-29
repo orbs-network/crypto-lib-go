@@ -9,9 +9,9 @@ package builders
 import (
 	"context"
 	"github.com/orbs-network/crypto-lib-go/crypto/digest"
-	"github.com/orbs-network/crypto-lib-go/crypto/keys"
+	"github.com/orbs-network/crypto-lib-go/crypto/ethereum/keys"
 	"github.com/orbs-network/crypto-lib-go/crypto/signer"
-	testKeys "github.com/orbs-network/crypto-lib-go/test/crypto/keys"
+	testKeys "github.com/orbs-network/crypto-lib-go/test/crypto/ethereum/keys"
 	"github.com/orbs-network/orbs-spec/types/go/primitives"
 	"github.com/orbs-network/orbs-spec/types/go/protocol"
 	"github.com/orbs-network/orbs-spec/types/go/protocol/consensus"

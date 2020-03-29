@@ -7,7 +7,7 @@
 package builders
 
 import (
-	"github.com/orbs-network/crypto-lib-go/test/crypto/keys"
+	"github.com/orbs-network/crypto-lib-go/test/crypto/ethereum/keys"
 	"github.com/orbs-network/orbs-spec/types/go/primitives"
 	"github.com/orbs-network/orbs-spec/types/go/protocol"
 	"github.com/orbs-network/orbs-spec/types/go/protocol/gossipmessages"
