@@ -9,7 +9,7 @@ package keys
 import (
 	"encoding/hex"
 	"github.com/orbs-network/crypto-lib-go/crypto/hash"
-	"github.com/orbs-network/crypto-lib-go/crypto/keys"
+	"github.com/orbs-network/crypto-lib-go/crypto/ethereum/keys"
 	"github.com/orbs-network/orbs-spec/types/go/primitives"
 )
 
