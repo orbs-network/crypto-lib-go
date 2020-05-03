@@ -179,6 +179,8 @@ github.com/orbs-network/membuffers v0.4.0 h1:tqeCLjdXJX3JIGy2mEMroeE+vG5mWTZx1vp
 github.com/orbs-network/membuffers v0.4.0/go.mod h1:mhOIfhkMQWKhbQbwD2BoIlV9eAA3LwZXMC0+JIrDmCM=
 github.com/orbs-network/orbs-spec v0.0.0-20200312223140-a78d945bab99 h1:SIM5FvYeayQfRWBTwuPfe/JHI1NrKY7QaTzjfemjAkA=
 github.com/orbs-network/orbs-spec v0.0.0-20200312223140-a78d945bab99/go.mod h1:D4+jHMhQ+mPB4uhqZ2wtzuG8RV2JgltWG1FqAwLIaOw=
+github.com/orbs-network/orbs-spec v0.0.0-20200503073830-babdf6adc845 h1:hWMWdWxmlUBLv/jE8JBWUI7A4BbPoocTUQx5Dec43NE=
+github.com/orbs-network/orbs-spec v0.0.0-20200503073830-babdf6adc845/go.mod h1:D4+jHMhQ+mPB4uhqZ2wtzuG8RV2JgltWG1FqAwLIaOw=
 github.com/orbs-network/pbparser v0.2.0/go.mod h1:WSzcxgH5xzywQm0YSASbD7RcdxBXZgqZaDVK8M+8DJ8=
 github.com/orbs-network/pbparser v0.3.0/go.mod h1:WSzcxgH5xzywQm0YSASbD7RcdxBXZgqZaDVK8M+8DJ8=
 github.com/orbs-network/scribe v0.1.0/go.mod h1:FmGcbukz5eolO+mqzxwmuy4RF4UEoLfGJIeEDAoGsBU=
