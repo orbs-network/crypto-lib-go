@@ -17,9 +17,10 @@ func EncodeHex(data []byte) string { // EIP-55 complaint
 	result := []byte(hex.EncodeToString(data)) // hex does all lowercase
 	hashed := hash.CalcKeccak256(result)
 	hashedHex := hex.EncodeToString(hashed)
+	hashedHexLen := len(hashedHex)
 
 	for i := 0; i < len(result); i++ {
-		if result[i] > '9' && hashedHex[i] > '7' { // we rely on 'a' > 'A' > '9'
+		if result[i] > '9' && hashedHex[i%hashedHexLen] > '7' { // we rely on 'a' > 'A' > '9'
 			result[i] -= 32 // turn lower case to upper case in ascii
 		}
 	}
