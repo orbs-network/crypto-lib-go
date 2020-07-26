@@ -18,11 +18,10 @@ type testStringPair struct {
 }
 
 var encodeStringTestTable = []testStringPair{
-	{"de709f2102306220921060314715629080e2fb77", "0xdE709f2102306220921060314715629080e2FB77"},
-	{"dbF03B407c01E7cD3CBea99509d93f8DDDC8C6FB", "0xdBf03B407c01e7CD3CBea99509d93F8DDdc8c6Fb"},
-	{"abcdef", "0xABcDEf"},
-	{"dbF03B407c01E7cD3CBea99509d93f8DDDC8C6FBdbF03B407c01E7cD3CBea99509d93f8DDDC8C6FB", "0xDBF03b407C01E7CD3CBea99509D93F8DdDC8C6FBdbF03b407C01e7Cd3cbEa99509D93f8DdDc8C6FB"},
-	{"dbF03B407c01E7cD3CBea99509d93f8DDDC8C6FBdbF03B407c01E7cD3CBea99509d93f8DDDC8C6FBde709f2102306220921060314715629080e2fb77dbF03B407c01E7cD3CBea99509d93f8DDDC8C6FBdbF03B407c01E7cD3CBea99509d93f8DDDC8C6FBde709f2102306220921060314715629080e2fb77", "0xDBf03b407C01E7Cd3CBeA99509d93F8DDdC8C6fBDBf03B407c01E7CD3cbEa99509d93f8dDDc8C6FbdE709f2102306220921060314715629080E2FB77dbf03b407C01E7Cd3CbEA99509D93f8Dddc8c6fBDbF03B407C01E7cd3cBeA99509d93f8DDDc8C6FbDE709F2102306220921060314715629080e2FB77"},
+	{"5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed", "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed"},
+	{"19ef9290b8cf5ec5e72f9fde3e044b37736ec0c7", "0x19ef9290B8cf5EC5e72F9fDE3E044b37736Ec0C7"},
+	{"dbF03B407c01E7cD3CBea99509d93f8DDDC8C6FB", "0xdbF03B407c01E7cD3CBea99509d93f8DDDC8C6FB"},
+	{"D1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb", "0xD1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb"},
 }
 
 func TestHexEncodeWithChecksum(t *testing.T) {
@@ -46,10 +45,10 @@ func TestHexDecodeGoodChecksum(t *testing.T) {
 }
 
 func TestHexDecodeBadChecksum(t *testing.T) {
-	pair := encodeStringTestTable[0]
-	rawData, err := hex.DecodeString(pair.sourceHex)
+	sourceHex := "D1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb"
+	rawData, err := hex.DecodeString(sourceHex)
 	require.NoError(t, err, "failed to decode, human error most likely")
-	wrongCheckSum := "de" + pair.checksumEncodedHex[4:]
+	wrongCheckSum := "0xd1220A0cf47c7B9Be7A2E6BA89F429762e7b9aDb"
 	decoded, err := DecodeHex(wrongCheckSum)
 	require.EqualError(t, err, "invalid checksum", "checksum should be invalid")
 	require.Equal(t, rawData, decoded, "data should be decoded correctly even though checksum is invalid")

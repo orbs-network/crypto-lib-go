@@ -13,20 +13,14 @@ import (
 	"strings"
 )
 
-func EncodeHex(data []byte) string { // EIP-55 'complaint', but using sha2 and not sha3
-	result := []byte(hex.EncodeToString(data))
-	hashed := hash.CalcSha256(data)
+func EncodeHex(data []byte) string { // EIP-55 complaint
+	result := []byte(hex.EncodeToString(data)) // hex does all lowercase
+	hashed := hash.CalcKeccak256(result)
+	hashedHex := hex.EncodeToString(hashed)
 
 	for i := 0; i < len(result); i++ {
-		hashByte := hashed[(i/2)%hash.SHA256_HASH_SIZE_BYTES]
-		if i%2 == 0 {
-			hashByte = hashByte >> 4
-		} else {
-			hashByte &= 0xf
-		}
-
-		if result[i] > '9' && hashByte > 7 {
-			result[i] -= 32
+		if result[i] > '9' && hashedHex[i] > '7' { // we rely on 'a' > 'A' > '9'
+			result[i] -= 32 // turn lower case to upper case in ascii
 		}
 	}
 
